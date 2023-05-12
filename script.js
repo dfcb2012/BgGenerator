@@ -17,14 +17,18 @@ function getRandomColor() {
   return "#" + toHex(r) + toHex(g) + toHex(b);
 }
 
-function changeBackgroundGradient() {
+function btnOnClick() {
   color1.value = getRandomColor();
   color2.value = getRandomColor();
+  changeBackgroundGradient()
+}
+
+function changeBackgroundGradient() {
   body.style.background = "linear-gradient(to right, " + color1.value + ", " + color2.value + ")";
   css.textContent = body.style.background + ";"
 }
 
-randomButton.addEventListener("click", changeBackgroundGradient);
+// randomButton.addEventListener("click", btnOnClick);
 
 // color1.addEventListener("input", changeBackgroundGradient);
 //
